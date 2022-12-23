@@ -10,4 +10,10 @@ module MyEnumerable
     @list.each { |value| array.push(value) if yield value }
     p !array.empty?
   end
+
+  def filter
+    array = []
+    @list.each { |value| array.push(value) if yield value }
+    p array
+  end
 end

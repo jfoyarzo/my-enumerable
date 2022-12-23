@@ -8,4 +8,3 @@ class MyList
   end
   include MyEnumerable
 end
-
