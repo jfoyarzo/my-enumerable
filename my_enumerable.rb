@@ -1,7 +1,13 @@
 module MyEnumerable
   def all?
-    boolean_array = []
-    @list.each { |value| boolean_array.push(value) if yield value }
-    p boolean_array.length == @list.length
+    array = []
+    @list.each { |value| array.push(value) if yield value }
+    p array.length == @list.length
+  end
+
+  def any?
+    array = []
+    @list.each { |value| array.push(value) if yield value }
+    p !array.empty?
   end
 end
