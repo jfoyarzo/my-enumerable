@@ -1,6 +1,4 @@
-$LOAD_PATH << '.'
-
-require 'my_enumerable'
+require_relative 'my_enumerable'
 
 class MyList
   def initialize(*list_array)
